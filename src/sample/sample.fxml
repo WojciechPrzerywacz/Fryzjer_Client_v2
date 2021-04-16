@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="MyPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <left>
+        <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fx:id="ImgView" fitHeight="249.0" fitWidth="200.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@grooming.png" />
+                    </image></ImageView>
+            <Button fx:id="cancelButton" layoutX="46.0" layoutY="440.0" mnemonicParsing="false" onAction="#cancelReservation" text="Anuluj rezerwacje" />
+            <ListView fx:id="yourReservations" layoutX="17.0" layoutY="257.0" opacity="0.9" prefHeight="166.0" prefWidth="167.0" />
+            <Label alignment="CENTER" layoutX="31.0" layoutY="232.0" text="Twoje rezerwacje:">
+               <font>
+                  <Font name="Microsoft Tai Le" size="18.0" />
+               </font></Label>
+            </children></Pane>
+    </left>
+    <center>
+        <Pane prefHeight="600.0" prefWidth="343.0" BorderPane.alignment="CENTER">
+            <children>
+                <ListView fx:id="priceList" editable="true" layoutX="10.0" layoutY="57.0" prefHeight="415.0" prefWidth="325.0" stylesheets="@style.css" />
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="59.0" layoutY="6.0" text="Nasze usługi:">
+                    <font>
+                        <Font name="Microsoft Tai Le" size="36.0" />
+                    </font>
+                </Label>
+                <Label fx:id="infoLabel" layoutX="100.0" layoutY="508.0" prefHeight="17.0" prefWidth="235.0" textAlignment="CENTER" />
+            </children>
+        </Pane>
+    </center>
+    <right>
+        <Pane prefHeight="600.0" prefWidth="255.0" BorderPane.alignment="CENTER">
+            <children>
+                <DatePicker id="datePick" fx:id="datePick" layoutX="25.0" layoutY="57.0" opacity="0.9" prefHeight="25.0" prefWidth="205.0" />
+                <ListView fx:id="hourPick" layoutX="25.0" layoutY="120.0" opacity="0.9" prefHeight="232.0" prefWidth="205.0" />
+                <Label alignment="CENTER" layoutX="52.0" layoutY="368.0" prefHeight="25.0" prefWidth="152.0" text="Wybierz usługę">
+               <font>
+                  <Font name="Microsoft Tai Le" size="18.0" />
+               </font></Label>
+                <ChoiceBox fx:id="pickHaircut" layoutX="28.0" layoutY="393.0" opacity="0.9" prefHeight="25.0" prefWidth="200.0" />
+                <Button fx:id="reservationButton" layoutX="91.0" layoutY="440.0" mnemonicParsing="false" onAction="#sendReservation" stylesheets="@style.css" text="Zarezerwuj" />
+            <Label alignment="CENTER" layoutX="52.0" layoutY="98.0" prefHeight="25.0" prefWidth="152.0" text="Wybierz godzinę">
+               <font>
+                  <Font name="Microsoft Tai Le" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </Pane>
+    </right>
+</BorderPane>
