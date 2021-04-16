@@ -1,9 +1,9 @@
 Simple Client-Server JavaFx application allowing users to book visits to hairdresser.
 
-* How does it look like *
+* How does it look like
 
 
-* How to run *
+* How to run
 
 Download files and create new project from existing files using IDE
 Remember to specify Javafx sdk location in your project, using: --module-path "PATH_HERE" --add-modules=javafx.controls,javafx.fxml
